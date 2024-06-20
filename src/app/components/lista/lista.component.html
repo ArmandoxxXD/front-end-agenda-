@@ -1,0 +1,65 @@
+<h1 class="cyberpunk glitched"><a href="/menu" >Menú</a>/Lista</h1>
+
+<table class="table">
+   <thead>
+      <tr>
+        <th scope="col" style="height:0%;" >
+      </th>
+        <th scope="col">
+         <div id="Scroll">
+          <button (click)="EliminarSeleccionadas()" id="btnEliminarSelec">Eliminar Seleccionadas<p style="font-size: 13px; color: gray;" id="slc">Seleccionadas 0/0</p></button>
+         </div>
+         </th>
+      </tr>
+    </thead>
+   <tbody>
+     <tr>
+       <td>
+         <div *ngFor="let nota of notas">
+            <div class="card" id={{nota.id}}>
+               <div class="card-avatar">
+                  <button [routerLink]="['/edit',nota.id]" (click)="refresh(nota.id)" class="btn">Editar</button>
+                  <button (click)="Eliminar(nota.id)" class="btn">Eliminar</button>
+                  <button  (click)="Completada(nota.id)" id="btn{{nota.id}}" class="btn">Seleccionar</button>
+               </div>
+               <div class="card-details">
+                  <div class="name">{{nota.titulo}}</div>
+                  <div class="occupation">Titulo</div>
+                  
+                  <div class="card-about">
+                     <div class="item">
+                        <span class="value">{{nota.materia}}</span>
+                        <span class="label">Materia</span>
+                     </div>
+                     <div class="item">
+                        <span class="value">{{nota.fechCreacion | date:'shortDate'}} </span>
+                        <span class="label">fecha inicio   </span>
+                     </div>
+                     <div class="item2">
+                        <span class="value">{{nota.fechLimite}}</span>
+                        <span class="label">fecha final</span>
+                     </div>
+                  </div>
+                  <div class="skills">
+                     <span class="value">{{nota.descripcion}}</span>
+                  </div>
+               </div>
+            </div>
+            <hr>
+            <br>
+            <br>
+            </div>
+       </td>
+     </tr>
+     <tr>
+       <td>
+      
+       </td>
+     </tr>
+   </tbody>
+ </table>
+
+
+
+ 
+

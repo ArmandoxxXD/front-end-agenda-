@@ -1,0 +1,16 @@
+
+<h1 class="cyberpunk glitched"><a href="/menu">Menu</a><a href="/lista" id="lista"></a>/Notas</h1>
+
+
+<input class="cyberpunk" type="text" placeholder="Titulo" style="width: 400px;" [(ngModel)] = "nota.titulo" />
+<input class="cyberpunk" type="text" placeholder="Fecha Limite" style="width: 400px;height: 5px; margin-left: 0.50%; margin-top: 1%;" [(ngModel)] = "nota.fechLimite" />
+<br>
+<br>
+<input class="cyberpunk" type="text" placeholder="Materia" style="width: 400px;" [(ngModel)] = "nota.materia"/>
+<br>
+<br>
+<textarea class="cyberpunk" placeholder="Descripcion" style="width: 800px;height: 150px;" [(ngModel)] = "nota.descripcion"></textarea>
+<br>
+<br>
+
+<button (click)="edit ? ActualizarNota(): GuardarNota()">Guardar</button>
